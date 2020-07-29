@@ -55,7 +55,7 @@ require_once 'header.php';
                         <img src="../images/book/<?= $books['book_image']?>" alt="" style="width:100%;height:350px">
                         <h5><?= $books['book_name']?></h5>
                         <p>Available : <span><?= $books['book_avilable']?></span></p>
-                        <a href="" class="btn btn-success btn-sm">Request For Book <i class="fa fa-plus" style="margin-left:3px"></i></a>
+                        <a href="allbook.php?id=<?= $books['id']?>&name=<?= $books['book_name']?>" class="btn btn-success btn-sm">Request For Book <i class="fa fa-plus" style="margin-left:3px"></i></a>
                         <hr>
                     </div>
                     <?php } ?>
@@ -75,7 +75,7 @@ require_once 'header.php';
                         <img src="../images/book/<?= $books['book_image']?>" alt="" style="width:100%;height:350px">
                         <h5><?= $books['book_name']?></h5>
                         <p>Available : <span><?= $books['book_avilable']?></span></p>
-                        <a href="" class="btn btn-success btn-sm">Request For Book <i class="fa fa-plus" style="margin-left:3px"></i></a>
+                        <a href="allbook.php?id=<?= $books['id']?>&name=<?= $books['book_name']?>" class="btn btn-success btn-sm">Request For Book <i class="fa fa-plus" style="margin-left:3px"></i></a>
                         <hr>
                     </div>
                     <?php } ?>
@@ -85,4 +85,80 @@ require_once 'header.php';
         <?php  }  ?>
     </div>
 </div>
-<?php require_once 'footer.php' ?>
+
+<?php
+function bookCheck($bid,$con){
+    $sql = "SELECT * FROM `books` WHERE `id` = $bid";
+    $res = mysqli_query($con,$sql);
+    $row = mysqli_num_rows($res);
+    if($row==0){
+        return FALSE;
+    }
+    else{
+        return TRUE;
+    }
+}
+
+
+function issueBooks($sid,$bid,$con){
+    $sql = "SELECT * FROM `issue_book` WHERE `student_id` = '$sid' AND book_id = $bid";
+    $result = mysqli_query($con,$sql);
+    $row = mysqli_num_rows($result);
+    if($row == 0)
+    {
+        return TRUE;
+    }else{
+        return FALSE;
+    }
+}
+
+function doubleRequestBook($sid,$bid,$con){
+    include('../include/db.php');
+        $sql = "SELECT * FROM `request_book` WHERE `student_id` = '$sid' AND `book_id` = $bid";
+        $result = mysqli_query($con,$sql);
+      $row =  mysqli_num_rows($result);
+        if($row == 0){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    }
+
+if(isset($_GET['id']) && isset($_GET['name'])){
+    $id = $_SESSION['user_success_id'];
+    $sql = "SELECT * FROM students WHERE id = $id";
+    $result = mysqli_query($con,$sql);
+    $data = mysqli_fetch_assoc($result);
+    $book_id = $_GET['id'];
+    $book_name = $_GET['name'];
+    $stu_name = $data['name'];
+    $stu_id = $data['uid'];
+    $sid = $data['id'];
+
+    if(issueBooks($sid,$book_id,$con) == TRUE){
+        if(doubleRequestBook($stu_id,$book_id,$con) == TRUE){
+            $sql = "INSERT INTO `request_book`(`student_name`, `student_id`, `book_id`, `book_name`) VALUES ('$stu_name' ,'$stu_id',$book_id,'$book_name')";
+            $res = mysqli_query($con,$sql);
+            if($res){ ?>
+<script>
+    alert("Request Book Successfully");
+    history.go(-1);
+</script>
+<?php
+                    } 
+        } else{ ?>
+<script>
+    alert("This Book Already Requested !!");
+</script>
+
+<?php   } //doublebook else
+    }else{ ?>
+<script>
+    alert("This Book Already Issued !!");
+</script>
+<?php  }//else issuebook
+
+
+}//isset ?>
+<?php require_once 'footer.php'; ?>
+

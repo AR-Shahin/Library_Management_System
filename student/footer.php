@@ -23,6 +23,7 @@
         <script src="../assets/endor/magnific-popup/jquery.magnific-popup.min.js"></script>
         <!--Examples-->
         <script src="../assets/javascripts/examples/dashboard.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
 
 </html>

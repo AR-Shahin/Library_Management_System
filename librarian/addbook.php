@@ -114,11 +114,15 @@ if(isset($_POST['save-btn'])){
             </div>
         </form>
     </div>
-
 </div>
 <style>
     .form-box{
-        margin-left:200px
+        margin-left:200px;
     }
+    @media only screen and (max-width:480px){
+    .form-box{
+        margin-left: 0px;
+    }
+}
 </style>
 <?php require_once 'footer.php' ?>

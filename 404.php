@@ -1,52 +1,66 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en" class="error-404">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+<!-- Mirrored from myiideveloper.com/helsinki/last-version/helsinki_green-dark/src/pages_error-404.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Mar 2019 13:06:17 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>404 page</title>
-  </head>
-  <body>
-    <div class="container">
-        <div class="error">
-            <h1>404</h1>
-            <h6>Ooops!!</h6>
-            <p>THAT PAGE DOESN'T EXIST OR IS UNAVLIABLE.</p>
-            <a href="index.php" class="btn btn-primary">Back to Home</a>
+
+    <!-- ========================================================= -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/vendor/animate.css/animate.css">
+    <!--SECTION css-->
+    <!-- ========================================================= -->
+    <!--TEMPLATE css-->
+    <!-- ========================================================= -->
+    <link rel="stylesheet" href="assets/stylesheets/css/style.css">
+</head>
+
+<body>
+<div class="wrap">
+    <!-- page BODY -->
+    <!-- ========================================================= -->
+    <div class="page-body">
+        <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+        <!--ERROR 404-->
+        <div class="row animated bounce ">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="panel mt-xlg">
+                    <div class="panel-content">
+                        <h1 class="error-number">404</h1>
+                        <h2 class="error-name"> Page not found</h2>
+                        <p class="error-text">Sorry, the page you are looking for cannot be found.
+                            <br/>Please check the url for errors or try one of the options below</p>
+                        <div class="row mt-xlg">
+                            <div class="col-sm-6  col-sm-offset-3">
+                                <button class="btn btn-sm btn-darker-2 btn-block" onclick="history.back();">Previous page</button>
+                                <a href="index.php" class="btn btn-sm btn-primary btn-block">Back to Home</a>
+                          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
     </div>
-<style>
-    body{
-        background: #ecf0f1;
-        color: #2c3e50;
-    }
-    .error{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        text-align: center;
-    }
-    h1{
-        font-size: 200px;
-        font-weight: 400;
-        letter-spacing: 1px;
-    }
-    h6{
-        font-weight: 600;
-        margin-bottom: 10px;
-    }
-      
-      
-      </style>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+</div>
+<!--BASIC scripts-->
+<!-- ========================================================= -->
+<script src="assets/vendor/jquery/jquery-1.12.3.min.js"></script>
+<script src ="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src ="ssets/vendor/nano-scroller/nano-scroller.js"></script>
+<!--TEMPLATE scripts-->
+<!-- ========================================================= -->
+<script src ="assets/javascripts/template-script.min.js"></script>
+<script src ="assets/javascripts/template-init.min.js"></script>
+<!-- SECTION script and examples-->
+<!-- ========================================================= -->
+</body>
+
+
+<!-- Mirrored from myiideveloper.com/helsinki/last-version/helsinki_green-dark/src/pages_error-404.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Mar 2019 13:06:17 GMT -->
 </html>

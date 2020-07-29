@@ -86,7 +86,7 @@ require_once 'header.php';
                                     <input type="text" class="form-control" id="password" value="<?= $_SESSION['for_issue_book_page']?>" readonly name="lib_name">
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary" name="issue-book">Issue Book</button>
+                                    <button type="submit" class="btn btn-primary" name="issue-book" onclick="a()">Issue Book</button>
                                 </div>
                             </form>
                             <hr>

@@ -57,7 +57,7 @@ if(isset($_POST['btn']))
                 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
                 <!--LOGO-->
                 <div class="logo">
-                    <h3 class="text-center m-0 p-0">Log In</h3>
+                    <h3 class="text-center m-0 p-0">Log In - Libraian</h3>
                     <?php  if(isset($status_not_active)){?>
                     <div class="alert alert-warning alert-dismissible show" role="alert">
                         <b><?= $status_not_active?></b> 

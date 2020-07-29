@@ -10,7 +10,7 @@ $sql = "SELECT * FROM libraian WHERE id = $id";
 $result = mysqli_query($con,$sql);
 $data = mysqli_fetch_assoc($result);
 $_SESSION['for_issue_book_page'] = $data['username'];
- $_SESSION['lib_user_name'] = $data['username'];
+$_SESSION['lib_user_name'] = $data['username'];
 $page = explode('/', $_SERVER['PHP_SELF']);
 $page = end($page);
 ?>
@@ -20,7 +20,7 @@ $page = end($page);
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <title>Helsinki</title>
+        <title>Libraian Admin Panel</title>
         <!--load progress bar-->
         <script src="../assets/vendor/pace/pace.min.js"></script>
         <link href="../assets/vendor/pace/pace-theme-minimal.css" rel="stylesheet" />
@@ -123,8 +123,10 @@ $page = end($page);
                                             <li><a href="addbook.php">Add Book</a></li>
                                             <li><a href="managebook.php">Manage Book</a></li>
                                         </ul>
+                                    <li class="<?=($page == 'requestbook.php') ? 'active-item' : '' ?>"><a href="requestbook.php"><i class="fa fa-book" aria-hidden="true"></i><span>Request Book</span></a></li>
                                     <li class="<?=($page == 'issuebook.php') ? 'active-item' : '' ?>"><a href="issuebook.php"><i class="fa fa-book" aria-hidden="true"></i><span>Issue Book</span></a></li>
                                     <li class="<?=($page == 'returnbook.php') ? 'active-item' : '' ?>"><a href="returnbook.php"><i class="fa fa-book" aria-hidden="true"></i><span>Return Book</span></a></li>
+
                                 </ul>
                             </nav>
                         </div>

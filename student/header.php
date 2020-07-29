@@ -50,7 +50,7 @@ $page = end($page);
                 <!-- LEFTSIDE header -->
                 <div class="leftside-header">
                     <div class="logo">
-                        <a href="index.html" class="on-click">
+                        <a href="index.php" class="on-click">
                             <h3>LMS</h3>
                         </a>
                     </div>
@@ -61,7 +61,51 @@ $page = end($page);
                 <!-- RIGHTSIDE header -->
                 <div class="rightside-header">
                     <div class="header-middle"></div>
+                    <!--NOCITE HEADERBOX-->
+                    <div class="header-section hidden-xs" id="notice-headerbox">
+                        <?php
+                        $id = $data['uid'];
+                        $sql = "SELECT * FROM `request_book` WHERE `student_id` = '$id' ";
+                        $res = mysqli_query($con,$sql);
+                        $req_count_book = mysqli_num_rows($res);
+                        ?>
 
+                        <!--alerts notices-->
+                        <div class="notice" id="alerts-notice">
+                            <i class="fa fa-bell-o" aria-hidden="true"><span class="badge badge-xs badge-top-right x-danger"><?=  $req_count_book?></span></i>
+
+                            <div class="dropdown-box basic">
+                                <div class="drop-header">
+                                    <h3><i class="fa fa-book" aria-hidden="true"></i> Request Books</h3>
+                                    <span class="badge x-danger b-rounded"></span>
+
+                                </div>
+                                <div class="drop-content">
+                                    <div class="widget-list list-left-element list-sm">
+                                        <ul>
+                                            <?php
+    $id = $data['uid'];
+                                $sql = "SELECT * FROM `request_book` WHERE `student_id` = '$id' ORDER BY id DESC";
+                                $res = mysqli_query($con,$sql);
+                                while($req_book = mysqli_fetch_assoc($res)) {?>
+
+                                            <li>
+                                            <a href="">
+                                                <div class="left-element" style="width:20px"><a href="delete.php?bookid=<?= $req_book['book_id']?>"><i class="fa fa-trash" style="color:red"></i></a></div>
+                                                <div class="text">
+                                                    <span class="title"><?= $req_book['book_name']?></span>
+                                                   
+                                                </div>
+                                            </a>
+                                        </li>
+                                            <?php } ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-separator"></div>
+                    </div>
                     <!--USER HEADERBOX -->
                     <div class="header-section" id="user-headerbox">
                         <div class="user-header-wrap">

@@ -61,7 +61,7 @@ require_once 'header.php'
                                 <td class="text-center">
                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#book-<?= $row['id']?>"><i class="fa fa-eye"></i></a>
                                     <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#bookedit-<?= $row['id']?>"><i class="fa fa-pencil"></i></a>
-                                    <a href="deleteimg.php?id=<?= base64_encode($row['id'])?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                    <a href="deleteimg.php?id=<?= base64_encode($row['id'])?>" class="btn btn-danger btn-sm dlt-btn" onclick="return confirm('Are you sure ?')"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             <?php } ?>
@@ -218,3 +218,4 @@ while ($books= mysqli_fetch_assoc($res)){;
 </div>
 <?php }?>
 <?php require_once 'footer.php' ?>
+

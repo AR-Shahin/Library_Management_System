@@ -41,16 +41,17 @@ require_once 'header.php';
                 <div class="panel-content">
                     <div class="row">
                         <div class="col-xs-4">
-                            <span class="icon fa fa-users color-lighter-1"></span>
+                            <span class="icon fa fa-book color-lighter-1"></span>
                         </div>
-                        <?php
-    $sql = "SELECT * FROM `students`";
-                                $res = mysqli_query($con,$sql);
-                                $total_students = mysqli_num_rows($res);
+                    <?php
+                        $id = $data['uid'];
+                        $sql = "SELECT * FROM `request_book` WHERE `student_id` = '$id' ";
+                        $res = mysqli_query($con,$sql);
+                        $req_count_book = mysqli_num_rows($res);
                         ?>
                         <div class="col-xs-8">
-                            <h4 class="subtitle color-lighter-1">Total Student</h4>
-                            <h1 class="title color-light"><b><?= $total_students?></b></h1>
+                            <h4 class="subtitle color-lighter-1">Request Books</h4>
+                            <h1 class="title color-light"><b><?= $req_count_book?></b></h1>
                         </div>
                     </div>
                 </div>

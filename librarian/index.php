@@ -13,21 +13,21 @@ require_once 'header.php';
 <div class="row animated fadeInUp">
     <div class="col-sm-6 col-md-4 col-lg-3">
         <div class="panel widgetbox wbox-2 bg-darker-2 color-light" style="background:red">
-            <a href="#">
+            <a href="requestbook.php">
                 <div class="panel-content">
                     <div class="row">
                         <div class="col-xs-4">
-                            <span class="icon fa fa-users color-lighter-1"></span>
+                            <span class="icon fa fa-book color-lighter-1"></span>
                         </div>
 
                         <?php
-                        $sql = "SELECT * FROM `libraian`";
+                        $sql = "SELECT * FROM `request_book`";
                         $res = mysqli_query($con,$sql);
-                        $total_libraian = mysqli_num_rows($res);
+                        $total_req = mysqli_num_rows($res);
                         ?>
                         <div class="col-xs-8">
-                            <h4 class="subtitle color-lighter-1">Total Libraian</h4>
-                            <h1 class="title color-light"><b><?= $total_libraian?></b></h1>
+                            <h4 class="subtitle color-lighter-1">Request Books</h4>
+                            <h1 class="title color-light"><b><?= $total_req?></b></h1>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ require_once 'header.php';
     </div>
     <div class="col-sm-6 col-md-4 col-lg-3">
         <div class="panel widgetbox wbox-2 bg-darker-2 color-light" style="background:red">
-            <a href="#">
+            <a href="students.php">
                 <div class="panel-content">
                     <div class="row">
                         <div class="col-xs-4">
@@ -58,7 +58,7 @@ require_once 'header.php';
     </div>
     <div class="col-sm-6 col-md-4 col-lg-3">
         <div class="panel widgetbox wbox-2 bg-darker-2 color-light" style="background:red">
-            <a href="#">
+            <a href="managebook.php">
                 <div class="panel-content">
                     <div class="row">
                         <div class="col-xs-4">
@@ -80,7 +80,7 @@ require_once 'header.php';
     </div> 
      <div class="col-sm-6 col-md-4 col-lg-3">
     <div class="panel widgetbox wbox-2 bg-darker-2 color-light" style="background:red">
-        <a href="#">
+        <a href="index.php">
             <div class="panel-content">
                 <div class="row">
                     <div class="col-xs-4">
@@ -122,3 +122,4 @@ require_once 'header.php';
     </div>
 </div>
 <?php require_once 'footer.php' ?>
+

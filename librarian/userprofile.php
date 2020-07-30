@@ -80,5 +80,15 @@ $data = mysqli_fetch_assoc($result);
             </div>
         </div>
     </div>
+    <div class="col-md-6 col-lg-8">
+        <div class="row">
+            <div class="col-md-6 " style="box-shadow:2px 3px 8px #ccc">
+                <img src="../images/libraian/chat2.png" alt="" style = "width:100%">
+            </div>
+            <div class="col-md-6" style="box-shadow:2px 3px 8px #ccc">
+                <img src="../images/libraian/chat3.png" alt="" style = "width:100%">
+            </div>
+        </div>
+    </div>
 </div>
 <?php require_once 'footer.php' ?>

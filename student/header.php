@@ -123,7 +123,7 @@ $page = end($page);
                         <div class="user-options dropdown-box">
                             <div class="drop-content basic">
                                 <ul>
-                                    <li> <a href="pages_user-profile.html"><i class="fa fa-user" aria-hidden="true"></i>User Profile</a></li>
+                                    <li> <a href="studentprofile.php"><i class="fa fa-user" aria-hidden="true"></i>User Profile</a></li>
                                     <li> <a href="pages_user-profile.html"><i class="fa fa-user" aria-hidden="true"></i> Update Profile</a></li>
                                 </ul>
                             </div>

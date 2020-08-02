@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once 'header.php' ;
 include('../include/db.php');
 if(isset($_POST['save-btn'])){
@@ -40,42 +40,42 @@ if(isset($_POST['save-btn'])){
             <li><a href="">Add Book</a></li>
         </ul>
     </div>
-</div>    
+</div>
 <div class="row animated fadeInUp">
     <div class="col-md-8 form-box">
-        <form class="form-horizontal " style="border:1px solid;padding:10px;" method="post" action="<?php $_SERVER['PHP_SELF']?>" enctype="multipart/form-data"> 
+        <form class="form-horizontal " style="border:1px solid;padding:10px;" method="post" action="<?php $_SERVER['PHP_SELF']?>" enctype="multipart/form-data">
             <h5 class="mb-lg text-center">Add New Book</h5>
             <?php  if(isset($error)){?>
-            <div class="alert alert-danger alert-dismissible show" role="alert">
-                <b><?= $error ?></b> 
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+                <div class="alert alert-danger alert-dismissible show" role="alert">
+                    <b><?= $error ?></b>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
             <?php }?>
             <?php  if(isset($book_inserted_success)){?>
-            <div class="alert alert-success alert-dismissible show" role="alert">
-                <b><?= $book_inserted_success ?></b> 
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+                <div class="alert alert-success alert-dismissible show" role="alert">
+                    <b><?= $book_inserted_success ?></b>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
             <?php }?>
             <?php  if(isset($book_not_inserted_succss)){?>
-            <div class="alert alert-danger alert-dismissible show" role="alert">
-                <b><?= $book_not_inserted_succss ?></b> 
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+                <div class="alert alert-danger alert-dismissible show" role="alert">
+                    <b><?= $book_not_inserted_succss ?></b>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
             <?php }?>
             <?php  if(isset($error_book)){?>
-            <div class="alert alert-danger alert-dismissible show" role="alert">
-                <b><?= $error_book ?></b> 
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+                <div class="alert alert-danger alert-dismissible show" role="alert">
+                    <b><?= $error_book ?></b>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
             <?php }?>
             <div class="form-group">
                 <label for="bookname" class="col-sm-2 control-label">Book Name</label>
@@ -120,9 +120,9 @@ if(isset($_POST['save-btn'])){
         margin-left:200px;
     }
     @media only screen and (max-width:480px){
-    .form-box{
-        margin-left: 0px;
+        .form-box{
+            margin-left: 0px;
+        }
     }
-}
 </style>
 <?php require_once 'footer.php' ?>

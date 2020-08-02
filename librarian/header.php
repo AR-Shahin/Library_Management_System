@@ -14,6 +14,7 @@ $_SESSION['lib_user_name'] = $data['username'];
 $page = explode('/', $_SERVER['PHP_SELF']);
 $page = end($page);
 ?>
+
 <!doctype html>
 <html lang="en" class="fixed left-sidebar-top">
 
@@ -69,7 +70,7 @@ $page = end($page);
                     <div class="header-section" id="user-headerbox">
                         <div class="user-header-wrap">
                             <div class="user-photo">
-                                <img alt="profile photo" src="../images/libraian/<?= $data['image']?>" />
+                                <img alt="profile photo" src="../images/libraian/<?= $data['image'];?>" />
                             </div>
                             <div class="user-info">
                                 <span class="user-name"><?=$data['name'] ?></span>
